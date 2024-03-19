@@ -11,131 +11,120 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeViewModel>(
-      builder: (context, themeVM, child) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 80),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              flex: 2,
+      builder: (context, themeVM, child) => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 1,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "About Me",
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.onPrimary,
+                    fontSize: 40,
+                  ),
+                ),
+                Text(
+                  "# Student",
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.onPrimary
+                        .withOpacity(0.6),
+                    fontSize: 28,
+                  ),
+                ),
+                Text(
+                  "# Developer",
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.onPrimary
+                        .withOpacity(0.6),
+                    fontSize: 28,
+                  ),
+                ),
+                Text(
+                  "# Self-Planning",
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.onPrimary
+                        .withOpacity(0.6),
+                    fontSize: 28,
+                  ),
+                ),
+                Text(
+                  "# Collaborator",
+                  style: TextStyle(
+                    color: themeVM.themeData.colorScheme.onPrimary
+                        .withOpacity(0.6),
+                    fontSize: 28,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 1080,
+            width: 60,
+            child: VerticalDivider(
+              thickness: 1.5,
+            ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "About Me",
+                    "Profile",
                     style: TextStyle(
                       color: themeVM.themeData.colorScheme.onPrimary,
-                      fontSize: 40,
+                      fontSize: 36,
                     ),
                   ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(60),
+                      border: Border.all(
+                        color: Colors.grey[500]!,
+                        width: 1.5,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(60),
+                      child: Image.asset(
+                        "assets/images/profile.png",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const ProfileIntro(),
+                  const SizedBox(height: 50),
                   Text(
-                    "# Student",
+                    "Education",
                     style: TextStyle(
-                      color: themeVM.themeData.colorScheme.onPrimary
-                          .withOpacity(0.6),
-                      fontSize: 28,
+                      color: themeVM.themeData.colorScheme.onPrimary,
+                      fontSize: 36,
                     ),
                   ),
+                  const CustomTimeline(),
+                  const SizedBox(height: 50),
                   Text(
-                    "# Developer",
+                    "Skills",
                     style: TextStyle(
-                      color: themeVM.themeData.colorScheme.onPrimary
-                          .withOpacity(0.6),
-                      fontSize: 28,
+                      color: themeVM.themeData.colorScheme.onPrimary,
+                      fontSize: 36,
                     ),
                   ),
-                  Text(
-                    "# Customer-Centric",
-                    style: TextStyle(
-                      color: themeVM.themeData.colorScheme.onPrimary
-                          .withOpacity(0.6),
-                      fontSize: 28,
-                    ),
-                  ),
-                  Text(
-                    "# Self-Planning",
-                    style: TextStyle(
-                      color: themeVM.themeData.colorScheme.onPrimary
-                          .withOpacity(0.6),
-                      fontSize: 28,
-                    ),
-                  ),
-                  Text(
-                    "# Collaborator",
-                    style: TextStyle(
-                      color: themeVM.themeData.colorScheme.onPrimary
-                          .withOpacity(0.6),
-                      fontSize: 28,
-                    ),
-                  ),
+                  const MySkill(),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 1080,
-              width: 60,
-              child: VerticalDivider(
-                thickness: 1.5,
-              ),
-            ),
-            Expanded(
-              flex: 7,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Profile",
-                      style: TextStyle(
-                        color: themeVM.themeData.colorScheme.onPrimary,
-                        fontSize: 36,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(60),
-                        border: Border.all(
-                          color: Colors.grey[500]!,
-                          width: 1.5,
-                        ),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(60),
-                        child: Image.asset(
-                          "assets/images/profile.png",
-                          height: 120,
-                          width: 120,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const ProfileIntro(),
-                    const SizedBox(height: 50),
-                    Text(
-                      "Education",
-                      style: TextStyle(
-                        color: themeVM.themeData.colorScheme.onPrimary,
-                        fontSize: 36,
-                      ),
-                    ),
-                    const CustomTimeline(),
-                    const SizedBox(height: 50),
-                    Text(
-                      "Skills",
-                      style: TextStyle(
-                        color: themeVM.themeData.colorScheme.onPrimary,
-                        fontSize: 36,
-                      ),
-                    ),
-                    const MySkill(),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
