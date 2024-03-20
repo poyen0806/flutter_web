@@ -36,12 +36,12 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer2<ThemeViewModel, PlatformViewModel>(
-      builder: (context, themeVM, pfVM, child) => MaterialApp.router(
+    return Consumer<ThemeViewModel>(
+      builder: (context, themeVM, child) => MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: "Poyen",
-        theme: themeVM.themeData,
         locale: const Locale("zh", "TW"),
+        theme: themeVM.themeData,
         routerConfig: Router.router,
       ),
     );
