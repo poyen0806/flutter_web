@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
+/// A title with welcome message of the home page
 class TitleIntro extends StatelessWidget {
   const TitleIntro({super.key});
 

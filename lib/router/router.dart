@@ -2,7 +2,7 @@ import 'package:flutter_web/router/routes.dart';
 import 'package:flutter_web/view/page/home_page.dart';
 import 'package:go_router/go_router.dart';
 
-/// 管理所有路由的 class，新增或編輯自己的路由時，不要碰到其他路由設定
+/// the router of the app (home ✓, blog 𐄂, project 𐄂)
 class Router {
   static GoRouter get router => GoRouter(
         initialLocation: Routes.home.path,

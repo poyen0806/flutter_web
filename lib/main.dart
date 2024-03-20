@@ -8,9 +8,16 @@ import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
+  // Set the URL strategy for the web without "#"
   setPathUrlStrategy();
+
+  // Ensure that the Flutter binding is initialized before proceeding
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase with default options for the current platform
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  
+  // Disable the debug check for invalid value type in Provider
   Provider.debugCheckInvalidValueType = null;
 
   runApp(

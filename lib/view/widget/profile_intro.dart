@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
+/// To display my profile introduction
 class ProfileIntro extends StatelessWidget {
   const ProfileIntro({super.key});
 

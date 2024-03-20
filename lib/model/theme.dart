@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// the theme model of the app (light theme and dark theme)
 class Theme {
   bool isDarkMode;
   ThemeData themeData;
@@ -47,6 +48,7 @@ class Theme {
     );
   }
 
+  /// change theme
   void toggleTheme() {
     isDarkMode = !isDarkMode;
     themeData = isDarkMode ? Theme.dark().themeData : Theme.light().themeData;

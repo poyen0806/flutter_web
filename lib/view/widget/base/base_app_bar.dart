@@ -5,6 +5,7 @@ import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
+/// The base app bar of the app
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BaseAppBar({super.key});
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
+/// A switcher to change the theme of the app (dark mode or light mode)
 class ThemeSwitcher extends StatelessWidget {
   const ThemeSwitcher({super.key});
 

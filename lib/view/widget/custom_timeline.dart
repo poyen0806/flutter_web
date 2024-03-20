@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
+/// The custom timeline widget for the education section
 class CustomTimeline extends StatelessWidget {
   const CustomTimeline({super.key});
 

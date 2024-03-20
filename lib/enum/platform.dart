@@ -1,15 +1,14 @@
-/// 平台裝置的類型列舉
 enum Platform {
-  /// 手機
+  /// enum for mobile platform, minimum width is 0
   mobile(0),
 
-  /// 平板
+  /// enum for tablet platform, minimum width is 720
   tablet(720),
 
-  /// 電腦
+  /// enum for computer platform, minimum width is 1280
   computer(1280);
 
-  /// 平台裝置的最小寬度
+  /// the minimum width of the platform
   final double minWidth;
 
   const Platform(this.minWidth);

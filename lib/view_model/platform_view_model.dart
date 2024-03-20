@@ -31,13 +31,13 @@ class PlatformViewModel with ChangeNotifier {
     }
   }
 
-  /// 取得當前平台裝置的寬度
+  /// Get the current platform's width
   double get width => size.width;
 
-  /// 取得當前平台裝置的高度
+  /// Get the current platform's height
   double get height => size.height;
 
-  /// 取得當情平台裝置合適的側邊 padding
+  /// Get the side padding of the current platform
   double get sidePadding {
     switch (platform) {
       case Platform.computer:

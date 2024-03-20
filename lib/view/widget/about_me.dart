@@ -5,6 +5,7 @@ import 'package:flutter_web/view/widget/profile_intro.dart';
 import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
+/// A section of the home page that contains tags, profile, education, and skills
 class AboutMe extends StatelessWidget {
   const AboutMe({super.key});
 
