@@ -31,19 +31,21 @@ Future<void> main() async {
   );
 }
 
-class Main extends StatelessWidget {
+class Main extends StatefulWidget {
   const Main({super.key});
 
   @override
+  State<Main> createState() => _MainState();
+}
+
+class _MainState extends State<Main> {
+  @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeViewModel>(
-      builder: (context, themeVM, child) => MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        title: "Poyen",
-        locale: const Locale("zh", "TW"),
-        theme: themeVM.themeData,
-        routerConfig: Router.router,
-      ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Web',
+      locale: const Locale('zh', 'TW'),
+      routerConfig: Router.router,
     );
   }
 }

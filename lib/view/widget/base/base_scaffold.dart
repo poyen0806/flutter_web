@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/view/widget/base/base_app_bar.dart';
 import 'package:flutter_web/view_model/platform_view_model.dart';
+import 'package:flutter_web/view_model/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
 /// The base scaffold of the app
@@ -41,6 +42,7 @@ class _BaseScaffoldState extends State<BaseScaffold> {
     final sidePadding = context.read<PlatformViewModel>().sidePadding;
 
     return Scaffold(
+      backgroundColor: context.watch<ThemeViewModel>().themeData.colorScheme.background,
       appBar: const BaseAppBar(),
       floatingActionButton: widget.floatingActionButton,
       body: Stack(
